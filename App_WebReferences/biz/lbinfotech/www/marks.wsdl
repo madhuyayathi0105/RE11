@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Getmarks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_CALLER_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_TYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_SUB_TYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_COLLEGE_CODE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_STUDENT_NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_GENDER" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_BATCH" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_COURSE_NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_STUDENT_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_EXAM_TYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_MARKS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_MAX_MARK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_STUD_MARK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_LANGUAGE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SUB_COUNT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CONDUCT_DATE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetmarksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetmarksResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetmarksSoapIn">
+    <wsdl:part name="parameters" element="tns:Getmarks" />
+  </wsdl:message>
+  <wsdl:message name="GetmarksSoapOut">
+    <wsdl:part name="parameters" element="tns:GetmarksResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetmarksHttpGetIn">
+    <wsdl:part name="VAR_CALLER_ID" type="s:string" />
+    <wsdl:part name="VAR_TYPE" type="s:string" />
+    <wsdl:part name="VAR_SUB_TYPE" type="s:string" />
+    <wsdl:part name="VAR_COLLEGE_CODE" type="s:string" />
+    <wsdl:part name="VAR_STUDENT_NAME" type="s:string" />
+    <wsdl:part name="VAR_GENDER" type="s:string" />
+    <wsdl:part name="VAR_BATCH" type="s:string" />
+    <wsdl:part name="VAR_COURSE_NAME" type="s:string" />
+    <wsdl:part name="VAR_STUDENT_ID" type="s:string" />
+    <wsdl:part name="VAR_EXAM_TYPE" type="s:string" />
+    <wsdl:part name="VAR_MARKS" type="s:string" />
+    <wsdl:part name="VAR_MAX_MARK" type="s:string" />
+    <wsdl:part name="VAR_STUD_MARK" type="s:string" />
+    <wsdl:part name="VAR_LANGUAGE" type="s:string" />
+    <wsdl:part name="SUB_COUNT" type="s:string" />
+    <wsdl:part name="CONDUCT_DATE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetmarksHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetmarksHttpPostIn">
+    <wsdl:part name="VAR_CALLER_ID" type="s:string" />
+    <wsdl:part name="VAR_TYPE" type="s:string" />
+    <wsdl:part name="VAR_SUB_TYPE" type="s:string" />
+    <wsdl:part name="VAR_COLLEGE_CODE" type="s:string" />
+    <wsdl:part name="VAR_STUDENT_NAME" type="s:string" />
+    <wsdl:part name="VAR_GENDER" type="s:string" />
+    <wsdl:part name="VAR_BATCH" type="s:string" />
+    <wsdl:part name="VAR_COURSE_NAME" type="s:string" />
+    <wsdl:part name="VAR_STUDENT_ID" type="s:string" />
+    <wsdl:part name="VAR_EXAM_TYPE" type="s:string" />
+    <wsdl:part name="VAR_MARKS" type="s:string" />
+    <wsdl:part name="VAR_MAX_MARK" type="s:string" />
+    <wsdl:part name="VAR_STUD_MARK" type="s:string" />
+    <wsdl:part name="VAR_LANGUAGE" type="s:string" />
+    <wsdl:part name="SUB_COUNT" type="s:string" />
+    <wsdl:part name="CONDUCT_DATE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetmarksHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="marksSoap">
+    <wsdl:operation name="Getmarks">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get marks.</wsdl:documentation>
+      <wsdl:input message="tns:GetmarksSoapIn" />
+      <wsdl:output message="tns:GetmarksSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="marksHttpGet">
+    <wsdl:operation name="Getmarks">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get marks.</wsdl:documentation>
+      <wsdl:input message="tns:GetmarksHttpGetIn" />
+      <wsdl:output message="tns:GetmarksHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="marksHttpPost">
+    <wsdl:operation name="Getmarks">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get marks.</wsdl:documentation>
+      <wsdl:input message="tns:GetmarksHttpPostIn" />
+      <wsdl:output message="tns:GetmarksHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="marksSoap" type="tns:marksSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Getmarks">
+      <soap:operation soapAction="http://tempuri.org/Getmarks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="marksSoap12" type="tns:marksSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Getmarks">
+      <soap12:operation soapAction="http://tempuri.org/Getmarks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="marksHttpGet" type="tns:marksHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Getmarks">
+      <http:operation location="/Getmarks" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="marksHttpPost" type="tns:marksHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Getmarks">
+      <http:operation location="/Getmarks" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="marks">
+    <wsdl:port name="marksSoap" binding="tns:marksSoap">
+      <soap:address location="http://www.lbinfotech.biz/mark/marks.asmx" />
+    </wsdl:port>
+    <wsdl:port name="marksSoap12" binding="tns:marksSoap12">
+      <soap12:address location="http://www.lbinfotech.biz/mark/marks.asmx" />
+    </wsdl:port>
+    <wsdl:port name="marksHttpGet" binding="tns:marksHttpGet">
+      <http:address location="http://www.lbinfotech.biz/mark/marks.asmx" />
+    </wsdl:port>
+    <wsdl:port name="marksHttpPost" binding="tns:marksHttpPost">
+      <http:address location="http://www.lbinfotech.biz/mark/marks.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

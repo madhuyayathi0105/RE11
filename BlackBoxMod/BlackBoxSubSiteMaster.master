@@ -1,0 +1,334 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BlackBoxSubSiteMaster.master.cs"
+    Inherits="BlackBoxSubSiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../2015Menu/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../2015Menu/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="../2015Menu/css/component.css" />
+    <link href="../Styles/css/Registration.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/Commoncss.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/common2015css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../2015Menu/js/modernizr.custom.js"></script>
+    <style type="text/css">
+        .style1
+        {
+            top: 105px;
+        }
+        .f1lbl
+        {
+            color: #ffffff;
+            font-family: Trebuchet MS;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .menuheadercss
+        {
+            background-color: lightyellow;
+            font-size: 21px;
+        }
+    </style>
+    <script src="../Scripts/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="../Scripts/AjaxJScript.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#closemenu").hide('fast');
+            $("#menushow").click(function () {
+                $("#showmenupages").toggle("fast");
+            });
+
+            $("#closemenu").click(function () {
+                $("#closemenu").hide('fast');
+            });
+
+            $("#allmenu").click(function () {
+                $("#closemenu").show('fast');
+            });
+
+            $("#divimg_stfphoto").click(function () {
+                $("#showstaffinfo").toggle('fast');
+            });
+
+            $("#showstaffinfo").click(function () {
+                $("#showstaffinfo").hide('fast');
+            });
+        });
+    </script>
+    <style type="text/css">
+        body
+        {
+            font-family: Trebuchet MS;
+        }
+        #menutable tr td
+        {
+            height: 100px;
+            margin: 10px;
+            border: 1px dotted transparent;
+            text-align: center;
+        }
+        #menutable tr td a
+        {
+            text-decoration: none;
+            color: Gray;
+        }
+        #menutable tr td a:hover
+        {
+            text-decoration: underline;
+            color: Gray;
+        }
+        #menutable tr td:hover
+        {
+            border: 1px solid #f0f0f0;
+        }
+        ul a
+        {
+            text-decoration: none;
+            color: Black;
+            font-size: 20px;
+            padding: 5px;
+            display: inline-block;
+        }
+        ul
+        {
+            display: inline;
+            margin: 0;
+            padding: 0;
+        }
+        ul li
+        {
+            display: inline-block; /*width: 150px;*/
+            width: 250px; /*border-bottom: 1px dotted lightgreen;
+            border-right: 1px dotted lightgreen;*/
+        }
+        ul li:hover
+        {
+            color: White; /*background: lightgreen;*/ /*border-bottom: 1px dotted lightgreen;*/
+        }
+        ul li:hover ul
+        {
+            color: White;
+            display: block;
+        }
+        ul li ul
+        {
+            width: 250px;
+            display: none;
+        }
+        ul li ul li
+        {
+            background: #555;
+            display: block;
+        }
+        ul li ul li a
+        {
+            display: block !important;
+        }
+        ul li ul li:hover
+        {
+            color: White; /*background: #666;*/
+        }
+        #showmenupages .has-sub
+        {
+            z-index: 1;
+            height: 35px;
+        }
+        #showmenupages .has-sub:hover > ul
+        {
+            display: block;
+            top: -36px;
+            position: relative;
+        }
+        #showmenupages .has-sub ul
+        {
+            display: none;
+            position: absolute;
+            width: 250px;
+            left: 250px; /*top: 0px;*/
+        }
+        #showmenupages.align-right .has-sub ul
+        {
+            left: auto;
+            right: 0;
+        }
+        #showmenupages .has-sub ul li a
+        {
+            background: white; /*border-bottom: 1px dotted lightgreen;*/
+            font-size: 14px;
+            filter: none;
+            display: block;
+            line-height: 172%;
+            padding: 5px; /*color: Black;*/
+        }
+        #showmenupages .has-sub ul li:hover a
+        {
+            /*background: lightgreen;*/
+        }
+        #showmenupages .has-sub .has-sub:hover > ul
+        {
+            display: block;
+        }
+        #showmenupages .has-sub .has-sub ul
+        {
+            display: none;
+            position: absolute;
+            left: 100%;
+        }
+        #showmenupages.align-right .has-sub .has-sub ul, #showmenupages.align-right ul ul ul
+        {
+            left: auto;
+            right: 100%;
+        }
+        #showmenupages .has-sub .has-sub ul li a
+        {
+            background: white; /*border-bottom: 1px dotted lightgreen;*/
+        }
+        #showmenupages .has-sub .has-sub ul li a:hover
+        {
+            /*background: lightgreen;*/ /*color: Black;*/
+        }
+        #showmenupages ul ul li.last > a, #showmenupages ul ul li:last-child > a, #showmenupages ul ul ul li.last > a, #showmenupages ul ul ul li:last-child > a, #showmenupages .has-sub ul li:last-child > a, #showmenupages .has-sub ul li.last > a
+        {
+            border-bottom: 0;
+        }
+        nav ul li ul
+        {
+            height: auto;
+        }
+        nav ul
+        {
+            overflow: auto;
+            overflow-x: hidden;
+            background: #F5F5F5;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="container" style="height: 100%; width: 100%; top: 0px; left: 0px; position: relative;">
+            <div class="mp-pusher" id="mp-pusher">
+                <nav id="mp-menu" class="mp-menu">
+					<div class="mp-level">						
+                                       
+					</div>
+				</nav>
+                <div class="scroller">
+                    <div class="scroller-inner">
+                        <div class="content clearfix">
+                            <div class="clearfix">
+                                <img src="../dashbd/menu.png" id="menushow" style="top: 19px; left: 94px; position: fixed;
+                                    cursor: pointer; z-index: 1000;" />
+                            </div>
+                            <div>
+                                <div id="MainDivIdValue" runat="server">
+                                    <asp:Label ID="lblcolname" Style="color: lightyellow; left: 147px; position: relative;
+                                        top: 15px;" CssClass="ins2015lbl_l" runat="server"> </asp:Label>
+                                    <div style="position: fixed; right: 32px; top: 12px;">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/dashbd/back.png" PostBackUrl="~/BlackBoxMod/BlackboxHome.aspx"
+                                                            Visible="true" />
+                                                        <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/dashbd/home.png" PostBackUrl="~/Default_LoginPage.aspx"
+                                                            Visible="true" />
+                                                        <asp:ImageButton ID="ImageButton2" runat="server" CssClass="f1lnk" ImageUrl="~/dashbd/logout.png"
+                                                            OnClick="lb2_Click" />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div id="divimg_stfphoto" style="position: relative; border-radius: 100px; height: 40px;
+                                                        width: 40px; background-color: lightyellow">
+                                                        <asp:Image ID="img_stfphoto" runat="server" AlternateText=" " Style="border-radius: 100px;
+                                                            height: 40px; width: 40px;" />
+                                                    </div>
+                                                    <div id="showstaffinfo" style="background-color: white; border-left: 3px solid mediumslateblue;
+                                                        border-radius: 0 0 345px; border-right: 115px solid mediumslateblue; box-shadow: 0 0 10px -4px;
+                                                        height: 309px; position: absolute; right: 22px; width: 291px; display: none;">
+                                                        <center>
+                                                            <asp:ImageButton ID="ImageButton1" runat="server" Style="left: 200px; position: relative;
+                                                                top: 22px;" CssClass="f1lnk" ImageUrl="~/dashbd/logout.png" OnClick="lb2_Click" />
+                                                            <asp:ImageButton ID="LinkButton1" runat="server" ImageUrl="~/dashbd/back.png" Style="left: 164px;
+                                                                transform: rotate(15deg); position: relative; top: 61px;" PostBackUrl="~/BlackBoxMod/BlackboxHome.aspx"
+                                                                Visible="true" />
+                                                            <div style="position: relative; border-radius: 100px; top: 10px; height: 120px; width: 120px;
+                                                                background-color: lightyellow">
+                                                                <asp:Image ID="imgstdphoto" runat="server" AlternateText=" " Style="border-radius: 100px;
+                                                                    height: 120px; width: 120px;" />
+                                                            </div>
+                                                            <br />
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <center>
+                                                                            <asp:Label ID="lbslstaffname" runat="server" CssClass="ins2015lbl_indigo"></asp:Label>
+                                                                            <br />
+                                                                            <asp:Label ID="lbldesignation" runat="server" CssClass="ins2015lbl_indigo"></asp:Label>
+                                                                            <br />
+                                                                            <asp:Label ID="lbldept" runat="server" CssClass="ins2015lbl_indigo"></asp:Label>
+                                                                        </center>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </center>
+                                                    </div>
+                                                    <div id="showmenupages" style="background-color: White; border: 1px solid #999999;
+                                                        background-color: #F0F0F0; box-shadow: 0px 0px 8px #999999; -moz-box-shadow: 0px 0px 10px #999999;
+                                                        -webkit-box-shadow: 0px 0px 10px #999999; border: 3px solid #D9D9D9; border-radius: 15px;
+                                                        height: auto; left: 92px; position: fixed; top: 58px; width: 250px; display: none;">
+                                                        <nav>
+                                                        <ul>
+                                                            <li class="has-sub" id="MasterList" runat="server" visible="false"><a href="#"><span>
+                                                                Master</span></a>
+                                                                <ul id="tabs1" runat="server">
+                                                                </ul>
+                                                            </li>
+                                                            <li class="has-sub" id="OperationList" runat="server" visible="false"><a href="#"><span>
+                                                                Operation</span></a>
+                                                                <ul id="tabs2" runat="server">
+                                                                </ul>
+                                                            </li>
+                                                            <li class="has-sub" id="ReportList" runat="server" visible="false"><a href="#"><span>
+                                                                Report</span></a><ul id="tabs3" runat="server">
+                                                                </ul>
+                                                            </li>
+                                                            <li class="has-sub" id="ChartList" runat="server" visible="false"><a href="#"><span>
+                                                                Chart</span></a><ul id="tabs4" runat="server">
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                        </nav>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                            <%--</div>--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" src="../2015Menu/js/classie.js"></script>
+            <script type="text/javascript" src="../2015Menu/js/mlpushmenu.js"></script>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

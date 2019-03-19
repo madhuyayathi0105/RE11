@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="get_common">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_CALLER_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_TYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_SUB_TYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_COLLEGE_CODE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_STUDENT_NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_GENDER" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_BATCH" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_COURSE_NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_STUDENT_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_LEAVE_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_REASON" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VAR_LANGUAGE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_commonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_commonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="get_commonSoapIn">
+    <wsdl:part name="parameters" element="tns:get_common" />
+  </wsdl:message>
+  <wsdl:message name="get_commonSoapOut">
+    <wsdl:part name="parameters" element="tns:get_commonResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_commonHttpGetIn">
+    <wsdl:part name="VAR_CALLER_ID" type="s:string" />
+    <wsdl:part name="VAR_TYPE" type="s:string" />
+    <wsdl:part name="VAR_SUB_TYPE" type="s:string" />
+    <wsdl:part name="VAR_COLLEGE_CODE" type="s:string" />
+    <wsdl:part name="VAR_STUDENT_NAME" type="s:string" />
+    <wsdl:part name="VAR_GENDER" type="s:string" />
+    <wsdl:part name="VAR_BATCH" type="s:string" />
+    <wsdl:part name="VAR_COURSE_NAME" type="s:string" />
+    <wsdl:part name="VAR_STUDENT_ID" type="s:string" />
+    <wsdl:part name="VAR_LEAVE_DATE" type="s:string" />
+    <wsdl:part name="VAR_REASON" type="s:string" />
+    <wsdl:part name="VAR_LANGUAGE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="get_commonHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="get_commonHttpPostIn">
+    <wsdl:part name="VAR_CALLER_ID" type="s:string" />
+    <wsdl:part name="VAR_TYPE" type="s:string" />
+    <wsdl:part name="VAR_SUB_TYPE" type="s:string" />
+    <wsdl:part name="VAR_COLLEGE_CODE" type="s:string" />
+    <wsdl:part name="VAR_STUDENT_NAME" type="s:string" />
+    <wsdl:part name="VAR_GENDER" type="s:string" />
+    <wsdl:part name="VAR_BATCH" type="s:string" />
+    <wsdl:part name="VAR_COURSE_NAME" type="s:string" />
+    <wsdl:part name="VAR_STUDENT_ID" type="s:string" />
+    <wsdl:part name="VAR_LEAVE_DATE" type="s:string" />
+    <wsdl:part name="VAR_REASON" type="s:string" />
+    <wsdl:part name="VAR_LANGUAGE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="get_commonHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="common_msgSoap">
+    <wsdl:operation name="get_common">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Common.</wsdl:documentation>
+      <wsdl:input message="tns:get_commonSoapIn" />
+      <wsdl:output message="tns:get_commonSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="common_msgHttpGet">
+    <wsdl:operation name="get_common">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Common.</wsdl:documentation>
+      <wsdl:input message="tns:get_commonHttpGetIn" />
+      <wsdl:output message="tns:get_commonHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="common_msgHttpPost">
+    <wsdl:operation name="get_common">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Common.</wsdl:documentation>
+      <wsdl:input message="tns:get_commonHttpPostIn" />
+      <wsdl:output message="tns:get_commonHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="common_msgSoap" type="tns:common_msgSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="get_common">
+      <soap:operation soapAction="http://tempuri.org/get_common" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="common_msgSoap12" type="tns:common_msgSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="get_common">
+      <soap12:operation soapAction="http://tempuri.org/get_common" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="common_msgHttpGet" type="tns:common_msgHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="get_common">
+      <http:operation location="/get_common" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="common_msgHttpPost" type="tns:common_msgHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="get_common">
+      <http:operation location="/get_common" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="common_msg">
+    <wsdl:port name="common_msgSoap" binding="tns:common_msgSoap">
+      <soap:address location="http://www.lbinfotech.biz/common/common_msg.asmx" />
+    </wsdl:port>
+    <wsdl:port name="common_msgSoap12" binding="tns:common_msgSoap12">
+      <soap12:address location="http://www.lbinfotech.biz/common/common_msg.asmx" />
+    </wsdl:port>
+    <wsdl:port name="common_msgHttpGet" binding="tns:common_msgHttpGet">
+      <http:address location="http://www.lbinfotech.biz/common/common_msg.asmx" />
+    </wsdl:port>
+    <wsdl:port name="common_msgHttpPost" binding="tns:common_msgHttpPost">
+      <http:address location="http://www.lbinfotech.biz/common/common_msg.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
