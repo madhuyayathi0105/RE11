@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+﻿Palpap;
+=======
 ﻿Helloworld;;
+>>>>>>> 2a5e9b042aca44509caa6f19570f34267f45bef2
 
 using System;
 using System.Collections.Generic;
